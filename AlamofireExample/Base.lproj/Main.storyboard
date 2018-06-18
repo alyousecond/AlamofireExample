@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8nG-FR-4wY" kind="relationship" relationship="viewControllers" id="7YG-Eg-QYE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Alamofire Sample List-->
+        <scene sceneID="7RP-Mu-RBf">
+            <objects>
+                <tableViewController id="bDl-Z7-Vfd" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WVk-hY-Q88">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="v30-cJ-tbX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="QGa-4z-4Bn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QGa-4z-4Bn" id="oxx-Dr-bw0">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-6W-4Xi">
+                                                    <rect key="frame" x="10" y="0.0" width="331" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="q8h-6W-4Xi" secondAttribute="bottom" id="AXf-vR-WcH"/>
+                                                <constraint firstItem="q8h-6W-4Xi" firstAttribute="leading" secondItem="oxx-Dr-bw0" secondAttribute="leading" constant="10" id="RVh-FF-wFd"/>
+                                                <constraint firstAttribute="trailing" secondItem="q8h-6W-4Xi" secondAttribute="trailing" id="VyU-9w-m6A"/>
+                                                <constraint firstItem="q8h-6W-4Xi" firstAttribute="top" secondItem="oxx-Dr-bw0" secondAttribute="top" id="lRb-zW-4oQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lex-Fr-psg" kind="show" id="QaT-nL-b0D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bDl-Z7-Vfd" id="KUl-8T-lBY"/>
+                            <outlet property="delegate" destination="bDl-Z7-Vfd" id="Qeg-ox-FPj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alamofire Sample List" id="lgW-Ko-cjF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwP-Lh-pVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="-285"/>
+        </scene>
+        <!--Simple View Controller-->
+        <scene sceneID="HIB-p8-i2b">
+            <objects>
+                <viewController id="lex-Fr-psg" customClass="SimpleViewController" customModule="AlamofireExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEi-v8-8cY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bT-yn-OI9">
+                                <rect key="frame" x="163" y="330.5" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rls-rw-Gq8">
+                                <rect key="frame" x="161" y="381.5" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="tapRefreshButton" destination="lex-Fr-psg" eventType="touchUpInside" id="q2X-xM-AV6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rls-rw-Gq8" firstAttribute="centerX" secondItem="3bT-yn-OI9" secondAttribute="centerX" id="1J7-FD-r50"/>
+                            <constraint firstItem="3bT-yn-OI9" firstAttribute="centerY" secondItem="ImL-wO-erA" secondAttribute="centerY" id="HPh-KU-dcL"/>
+                            <constraint firstItem="3bT-yn-OI9" firstAttribute="centerX" secondItem="ImL-wO-erA" secondAttribute="centerX" id="KPo-wC-4fj"/>
+                            <constraint firstItem="rls-rw-Gq8" firstAttribute="top" secondItem="3bT-yn-OI9" secondAttribute="bottom" constant="30" id="UVs-wl-N8d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ImL-wO-erA"/>
+                    </view>
+                    <connections>
+                        <outlet property="ipLabel" destination="3bT-yn-OI9" id="hg8-qr-HM5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TiV-nd-lTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2423" y="-286"/>
+        </scene>
+        <!--Alamofire-->
+        <scene sceneID="Apg-2F-gzl">
+            <objects>
+                <navigationController id="8nG-FR-4wY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Alamofire" image="first" id="cjm-H1-rPV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cl8-Tz-FfO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bDl-Z7-Vfd" kind="relationship" relationship="rootViewController" id="znd-Ma-7xX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLW-ey-BG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>
