@@ -146,9 +146,9 @@
 		09BCFAF520D21D790041A17A /* AlamofireExample */ = {
 			isa = PBXGroup;
 			children = (
-				09EFCCCA20D772A200E134B4 /* Samples */,
 				09BCFB4020D471C60041A17A /* Protocol */,
 				09BCFB3D20D34B8F0041A17A /* Common */,
+				09EFCCCA20D772A200E134B4 /* Samples */,
 				09BCFAF620D21D790041A17A /* AppDelegate.swift */,
 				09BCFAFC20D21D790041A17A /* Main.storyboard */,
 				09BCFAFF20D21D790041A17A /* Assets.xcassets */,

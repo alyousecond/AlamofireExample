@@ -8,7 +8,7 @@
 
 import RxSwift
 
-struct SimpleSate: HasFetching, HasError {
+struct SimpleSate {
     var isFetching  = false
     var error = AppError.noError
     var origin = "No data"
