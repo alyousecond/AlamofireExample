@@ -81,8 +81,6 @@
 		09BCFB4D20D4B8350041A17A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		09BCFB4F20D4BB010041A17A /* MarqueeLabelSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarqueeLabelSwift.framework; path = Carthage/Build/iOS/MarqueeLabelSwift.framework; sourceTree = "<group>"; };
 		09EFCCC420D4CB1A00E134B4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		09EFCCC620D6319600E134B4 /* ViewController+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Presentable.swift"; sourceTree = "<group>"; };
-		09EFCCC820D762CB00E134B4 /* State+Has.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "State+Has.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				09BCFB4120D471FE0041A17A /* Repository+Requestable.swift */,
-				09EFCCC620D6319600E134B4 /* ViewController+Presentable.swift */,
-				09EFCCC820D762CB00E134B4 /* State+Has.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
