@@ -31,8 +31,6 @@
 		09BCFB5020D4BB010041A17A /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCFB4F20D4BB010041A17A /* MarqueeLabelSwift.framework */; };
 		09BCFB5120D4BB140041A17A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCFB4D20D4B8350041A17A /* SnapKit.framework */; };
 		09EFCCC520D4CB1A00E134B4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCC420D4CB1A00E134B4 /* APIManager.swift */; };
-		09EFCCC720D6319600E134B4 /* ViewController+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCC620D6319600E134B4 /* ViewController+Presentable.swift */; };
-		09EFCCC920D762CB00E134B4 /* State+Has.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCC820D762CB00E134B4 /* State+Has.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -394,13 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				09BCFB3820D33F6C0041A17A /* SimpleRepository.swift in Sources */,
-				09EFCCC920D762CB00E134B4 /* State+Has.swift in Sources */,
 				09BCFB4220D471FE0041A17A /* Repository+Requestable.swift in Sources */,
 				09BCFB3620D226880041A17A /* SimpleViewController.swift in Sources */,
 				09EFCCC520D4CB1A00E134B4 /* APIManager.swift in Sources */,
 				09BCFB3F20D34BB50041A17A /* AppError.swift in Sources */,
 				09BCFB3A20D340530041A17A /* SimplePresenter.swift in Sources */,
-				09EFCCC720D6319600E134B4 /* ViewController+Presentable.swift in Sources */,
 				09BCFB3C20D347530041A17A /* HttpbinIpEntity.swift in Sources */,
 				09BCFB4420D47BB80041A17A /* SimpleState.swift in Sources */,
 				09BCFAF720D21D790041A17A /* AppDelegate.swift in Sources */,
