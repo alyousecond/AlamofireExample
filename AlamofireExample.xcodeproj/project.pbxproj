@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0937734220DBA9C3004C23DA /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */; };
 		0937734420DC5923004C23DA /* Element+Able.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734320DC5923004C23DA /* Element+Able.swift */; };
+		0937734720DDD1B2004C23DA /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734620DDD1B2004C23DA /* RequestState.swift */; };
 		09BCFAF720D21D790041A17A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFAF620D21D790041A17A /* AppDelegate.swift */; };
 		09BCFAFE20D21D790041A17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BCFAFC20D21D790041A17A /* Main.storyboard */; };
 		09BCFB0020D21D790041A17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BCFAFF20D21D790041A17A /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		0937734320DC5923004C23DA /* Element+Able.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Able.swift"; sourceTree = "<group>"; };
+		0937734620DDD1B2004C23DA /* RequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestState.swift; sourceTree = "<group>"; };
 		09BCFAF320D21D790041A17A /* AlamofireExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BCFAF620D21D790041A17A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09BCFAFD20D21D790041A17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0937734520DDD195004C23DA /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				0937734620DDD1B2004C23DA /* RequestState.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		09BCFAEA20D21D780041A17A = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 		09BCFAF520D21D790041A17A /* AlamofireExample */ = {
 			isa = PBXGroup;
 			children = (
+				0937734520DDD195004C23DA /* Global */,
 				09EFCCE820DBA19D00E134B4 /* Extension */,
 				09BCFB4020D471C60041A17A /* Protocol */,
 				09BCFB3D20D34B8F0041A17A /* Common */,
@@ -459,6 +470,7 @@
 				09BCFB3820D33F6C0041A17A /* SimpleRepository.swift in Sources */,
 				09BCFB4220D471FE0041A17A /* Repository+Able.swift in Sources */,
 				09EFCCDC20D8D1F000E134B4 /* QiitaItemEntity.swift in Sources */,
+				0937734720DDD1B2004C23DA /* RequestState.swift in Sources */,
 				09EFCCDA20D8D19500E134B4 /* ListPresenter.swift in Sources */,
 				09EFCCD820D8D18200E134B4 /* ListState.swift in Sources */,
 				09EFCCEA20DBA1BF00E134B4 /* Bool+Ex.swift in Sources */,
