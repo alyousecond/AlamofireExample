@@ -9,7 +9,7 @@ import Alamofire
 import RxSwift
 
 protocol ListPresenterProtocol{
-    func request()
+    func request(_ type: RequestState.RequestType)
     func markAsRead(with identify: String)
     func toggleLike(with identify: String)
     var repository: ListRepositoryProtocol { get }
@@ -36,9 +36,16 @@ struct ListPresenter: ListPresenterProtocol {
     }
     
     // MARK: Public event method
-    func request() {
-        onNext(newState: stateRequestStart(origin: state))
-        getQiitaItems()
+    func request(_ type: RequestState.RequestType) {
+        switch type {
+        case .request:
+            onNext(newState: stateRequestStart(origin: state))
+        case .refresh:
+            onNext(newState: stateRefreshStart(origin: state))
+        }
+        
+        let urlString = "https://qiita.com/api/v2/items?page=\(state.page)&per_page=\(state.perPage)"
+        getQiitaItems(urlString: urlString)
             .subscribe { event in
                 switch event {
                 case .success(let entities):
@@ -64,8 +71,7 @@ struct ListPresenter: ListPresenterProtocol {
 
 extension ListPresenter {
     // MARK: For repository
-    private func getQiitaItems() -> Single<[QiitaItemEntity]> {
-        let urlString = "https://qiita.com/api/v2/items?page=1&per_page=20"
+    private func getQiitaItems(urlString: String) -> Single<[QiitaItemEntity]> {
         return repository.createQiitaItemsSingle(withEndpoint: urlString, method: .get, parameters: nil, encoding: JSONEncoding.default)
     }
 
@@ -100,14 +106,21 @@ extension ListPresenter {
 
     private func stateRequestStart(origin: ListState) -> ListState {
         var newState = origin
-        newState.isFetching = true
+        newState.requestState = RequestState(requestType: .request, isFetching: true)
         newState.error = AppError.noError
         return newState
     }
-    
+
+    private func stateRefreshStart(origin: ListState) -> ListState {
+        var newState = origin
+        newState.requestState = RequestState(requestType: .refresh, isFetching: true)
+        newState.error = AppError.noError
+        return newState
+    }
+
     private func stateResponceOnSuccess(origin: ListState, entities: [QiitaItemEntity]) -> ListState {
         var newState = origin
-        newState.isFetching = false
+        newState.requestState = RequestState(requestType: origin.requestState.requestType, isFetching: false)
         newState.qiitaItems = qiitaItemsElement(entities: entities)
         return newState
     }
@@ -115,7 +128,7 @@ extension ListPresenter {
     private func stateResponceOnError(origin: ListState, appError: AppError) -> ListState {
         var newState = origin
         newState.error = appError
-        newState.isFetching = false
+        newState.requestState = RequestState(requestType: origin.requestState.requestType, isFetching: false)
         return newState
     }
 
