@@ -39,6 +39,48 @@ extension FetchingPresentable where Self: UIViewController {
 }
 
 ///////////////////////////////////////////////////////////////////////
+// RequestStatePresentable
+///////////////////////////////////////////////////////////////////////
+//
+// You need to add the following code to ViewController.
+// bindRequestState(state: viewState, disposeBag: disposeBag)
+//
+protocol RefreshingPresentable: class {
+    var refreshControl: UIRefreshControl { get }
+    var refreshControlView: UIScrollView { get }
+    func bindRefreshing<T: HasRequestState>(state: Observable<T>, disposeBag: DisposeBag)
+}
+
+extension RefreshingPresentable where Self: UIViewController {
+    func bindRefreshing<T>(state: Observable<T>, disposeBag: DisposeBag) where T : HasRequestState {
+        refreshControlView.addSubview(refreshControl)
+
+        state
+            .map{ $0.requestState }
+            .distinctUntilChanged()
+            .filter { $0.requestType == .request }
+            .map { $0.isFetching }
+            .subscribe(onNext: { $0 ? SVProgressHUD.show() : SVProgressHUD.dismiss() })
+            .disposed(by: disposeBag)
+        
+        state
+            .map{ $0.requestState.isFetching }
+            .distinctUntilChanged()
+            .bind(to: UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+            .disposed(by: disposeBag)
+
+        state
+            .map { $0.requestState }
+            .distinctUntilChanged()
+            .filter { $0.requestType == .refresh }
+            .map { $0.isFetching }
+            .filter { $0.reverse }
+            .bind(to: refreshControl.rx.isRefreshing)
+            .disposed(by: disposeBag)
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
 // ErrorNotificationPresentable
 ///////////////////////////////////////////////////////////////////////
 //
