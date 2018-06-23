@@ -8,8 +8,23 @@
 
 import RxSwift
 
-struct ListState: HasError, HasFetching {
-    var isFetching  = false
+struct RequestState: Equatable {
+    static func ==(lhs: RequestState, rhs: RequestState) -> Bool {
+        return lhs.isFetching == rhs.isFetching && lhs.requestType == rhs.requestType
+    }
+    
+    enum RequestType {
+        case request
+        case refresh
+    }
+    var requestType = RequestType.request
+    var isFetching = false
+}
+
+struct ListState: HasError, HasRequestState {
+    var page = 1
+    var perPage = 20
+    var requestState  = RequestState()
     var error = AppError.noError
     var qiitaItems: [QiitaItemElement] = []
 }
