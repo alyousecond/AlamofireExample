@@ -10,6 +10,7 @@
 		0937734220DBA9C3004C23DA /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */; };
 		0937734420DC5923004C23DA /* Element+Able.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734320DC5923004C23DA /* Element+Able.swift */; };
 		0937734720DDD1B2004C23DA /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734620DDD1B2004C23DA /* RequestState.swift */; };
+		0937734920E0E3EF004C23DA /* IndicatorFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734820E0E3EF004C23DA /* IndicatorFooterView.swift */; };
 		09BCFAF720D21D790041A17A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFAF620D21D790041A17A /* AppDelegate.swift */; };
 		09BCFAFE20D21D790041A17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BCFAFC20D21D790041A17A /* Main.storyboard */; };
 		09BCFB0020D21D790041A17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BCFAFF20D21D790041A17A /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		0937734320DC5923004C23DA /* Element+Able.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Able.swift"; sourceTree = "<group>"; };
 		0937734620DDD1B2004C23DA /* RequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestState.swift; sourceTree = "<group>"; };
+		0937734820E0E3EF004C23DA /* IndicatorFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorFooterView.swift; sourceTree = "<group>"; };
 		09BCFAF320D21D790041A17A /* AlamofireExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BCFAF620D21D790041A17A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09BCFAFD20D21D790041A17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				09EFCCE220DB0ED800E134B4 /* QiitaItemElement.swift */,
 				09EFCCE420DB3E3500E134B4 /* ListViewCell.swift */,
 				09EFCCE520DB3E3500E134B4 /* ListViewCell.xib */,
+				0937734820E0E3EF004C23DA /* IndicatorFooterView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				09BCFB3620D226880041A17A /* SimpleViewController.swift in Sources */,
 				09EFCCD220D8D10E00E134B4 /* AppBuilder.swift in Sources */,
 				09EFCCC520D4CB1A00E134B4 /* APIManager.swift in Sources */,
+				0937734920E0E3EF004C23DA /* IndicatorFooterView.swift in Sources */,
 				09EFCCD620D8D16200E134B4 /* ListRepository.swift in Sources */,
 				09EFCCCD20D8D09600E134B4 /* State+Has.swift in Sources */,
 				09BCFB3F20D34BB50041A17A /* AppError.swift in Sources */,
@@ -662,6 +666,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AlamofireExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.ivalueworks.AlamofireExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -681,6 +686,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AlamofireExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.ivalueworks.AlamofireExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

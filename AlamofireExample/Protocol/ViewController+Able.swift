@@ -39,11 +39,11 @@ extension FetchingPresentable where Self: UIViewController {
 }
 
 ///////////////////////////////////////////////////////////////////////
-// RequestStatePresentable
+// RefreshingPresentable
 ///////////////////////////////////////////////////////////////////////
 //
 // You need to add the following code to ViewController.
-// bindRequestState(state: viewState, disposeBag: disposeBag)
+// bindRefreshing(state: viewState, disposeBag: disposeBag)
 //
 protocol RefreshingPresentable: class {
     var refreshControl: UIRefreshControl { get }
@@ -81,11 +81,72 @@ extension RefreshingPresentable where Self: UIViewController {
 }
 
 ///////////////////////////////////////////////////////////////////////
+// PagingPresentable
+///////////////////////////////////////////////////////////////////////
+//
+// You need to add the following code to ViewController.
+// bindPaging(state: viewState, disposeBag: disposeBag)
+//
+protocol IndicatorFooterViewProtocol {
+    func startAnimating()
+    func stopAnimating()
+    func toggleEndIndicator(isShowing: Bool)
+}
+
+protocol PagingPresentable: class {
+    associatedtype T: IndicatorFooterViewProtocol
+    var footerView: T { get }
+    var tableView: UITableView { get }
+    func paging()
+    func bindPaging<T: HasPagingState>(state: Observable<T>, disposeBag: DisposeBag)
+}
+
+extension PagingPresentable where Self: UIViewController {
+    func bindPaging<T>(state: Observable<T>, disposeBag: DisposeBag) where T : HasPagingState {
+        tableView.tableFooterView = footerView as? UIView
+        
+        tableView.rx.didEndDecelerating
+            .flatMap { return state }
+            .filter { $0.canPaging }
+            .subscribe(onNext: { [weak self] _ in
+                guard let isReachedBottom = self?.isReachedBottom else { return }
+                if isReachedBottom {
+                    self?.footerView.startAnimating()
+                    self?.paging()
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        state
+            .filter { $0.hasElements }
+            .map { $0.isEndPage }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] in
+                self?.footerView.toggleEndIndicator(isShowing: $0)
+            })
+            .disposed(by: disposeBag)
+        
+        state
+            .map { $0.requestState }
+            .distinctUntilChanged()
+            .filter { $0.requestType == .paging && $0.isFetching.reverse }
+            .subscribe(onNext: { [weak self] _ in
+                self?.footerView.stopAnimating()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private var isReachedBottom: Bool {
+        return (UIScreen.main.bounds.height + tableView.contentOffset.y) > tableView.contentSize.height
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
 // ErrorNotificationPresentable
 ///////////////////////////////////////////////////////////////////////
 //
 // You need to add the following code to ViewController.
-// bindFetching(state: viewState, disposeBag: disposeBag)
+// bindErrorNotification(state: viewState, disposeBag: disposeBag)
 //
 protocol ErrorNotificationPresentable: class {
     var bannerQueue: [NotificationBanner] { get set }

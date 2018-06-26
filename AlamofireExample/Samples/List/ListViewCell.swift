@@ -20,7 +20,6 @@ class ListViewCell: UITableViewCell, Identifiable {
     @IBOutlet var likeButton: UIButton!
     
     let disposeBag = DisposeBag()
-//    var linkButtonOnTap = PublishSubject<String>()
     var isSubscribe = false
 
     override func awakeFromNib() {
@@ -32,13 +31,6 @@ class ListViewCell: UITableViewCell, Identifiable {
         // Initialization code
         accessoryType = .none
         separatorInset = .zero
-
-//        likeButton.rx.tap
-//            .subscribe(onNext: { [weak self] in
-//                guard let identifier = self?.identifier else { assertionFailure();  return }
-//                self?.linkButtonOnTap.onNext(identifier)
-//            })
-//            .disposed(by: disposeBag)
     }
 
     func bind(element: QiitaItemElement) {

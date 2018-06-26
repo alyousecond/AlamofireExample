@@ -29,7 +29,9 @@ struct ListRepository: ListRepositoryProtocol {
                     case .failure(let error):
                         singleEvent(.error(AppError.network(error)))
                     }
+                
             }
+            debugPrint(request)
             return Disposables.create { request.cancel() }
         }
     }

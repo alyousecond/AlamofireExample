@@ -10,12 +10,18 @@ struct RequestState: Equatable {
     enum RequestType {
         case request
         case refresh
+        case paging
     }
 
     static func ==(lhs: RequestState, rhs: RequestState) -> Bool {
         return lhs.isFetching == rhs.isFetching && lhs.requestType == rhs.requestType
     }
     
-    var requestType = RequestType.request
-    var isFetching = false
+    var requestType: RequestType
+    var isFetching: Bool
+    
+    init(requestType: RequestType, isFetching: Bool) {
+        self.requestType = requestType
+        self.isFetching = isFetching
+    }
 }

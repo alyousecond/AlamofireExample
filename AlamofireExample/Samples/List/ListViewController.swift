@@ -14,21 +14,16 @@ import SVProgressHUD
 import NotificationBanner
 import Kingfisher
 
-class ListViewController: UIViewController, RefreshingPresentable, ErrorNotificationPresentable {
-    var refreshControl = UIRefreshControl() // RefreshingPresentable
-    var refreshControlView: UIScrollView { return tableViewController.tableView  } // RefreshingPresentable
+final class ListViewController: UIViewController, RefreshingPresentable, PagingPresentable, ErrorNotificationPresentable {
+    let refreshControl = UIRefreshControl() // RefreshingPresentable
+    var refreshControlView: UIScrollView { return tableView  } // RefreshingPresentable
     var bannerQueue: [NotificationBanner] = [] // ErrorNotificationPresentable
+    let footerView = IndicatorFooterView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44)) // PagingPresentable
+    let tableView = UITableView(frame: .zero, style: .plain) // PagingPresentable
 
     private let presenter: ListPresenterProtocol
     private let disposeBag = DisposeBag()
     private let cellIdentifier = String(describing: type(of: ListViewCell.self))
-    private lazy var tableViewController: UITableViewController = {
-        let tableViewController = UITableViewController(style: .plain)
-        tableViewController.tableView.register(UINib(nibName: String(describing: ListViewCell.self), bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        tableViewController.tableView.rowHeight = CGFloat(90.0)
-        return tableViewController
-    }()
-    private var tableView: UITableView { return tableViewController.tableView }
 
     init(presenter: ListPresenterProtocol) {
         self.presenter = presenter
@@ -37,22 +32,22 @@ class ListViewController: UIViewController, RefreshingPresentable, ErrorNotifica
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.register(UINib(nibName: String(describing: ListViewCell.self), bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.rowHeight = CGFloat(90.0)
         view.addSubview(tableView)
-        addChildViewController(tableViewController)
-        tableViewController.didMove(toParentViewController: self)
-        
+
         let viewState = presenter.stateVariable
             .asObservable()
             .observeOn(MainScheduler.instance)
 
         bindRefreshing(state: viewState, disposeBag: disposeBag) // RefreshingPresentable
+        bindPaging(state: viewState, disposeBag: disposeBag) // PagingPresentable
         bindErrorNotification(state: viewState, disposeBag: disposeBag) // ErrorNotificationPresentable
 
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged) // Required for refresh controll
 
         viewState
-            .map { $0.qiitaItems }
+            .map { $0.elements }
             .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier, cellType: ListViewCell.self)) { (row, element, cell) in
                 cell.bind(element: element)
                 if cell.isSubscribe.reverse {
@@ -82,8 +77,16 @@ class ListViewController: UIViewController, RefreshingPresentable, ErrorNotifica
         presenter.request(.refresh)
     }
 
+    func paging() {
+        presenter.request(.paging)
+    }
+
+    private func isReachedBottom(contentOffset: CGFloat, contentHeight: CGFloat) -> Bool {
+        return (UIScreen.main.bounds.height + contentOffset) > contentHeight
+    }
+
     private func makeConstraints() {
-        tableViewController.tableView.snp.makeConstraints {
+        tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
