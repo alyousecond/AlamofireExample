@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0937734220DBA9C3004C23DA /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */; };
+		0937734420DC5923004C23DA /* Element+Able.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734320DC5923004C23DA /* Element+Able.swift */; };
+		0937734720DDD1B2004C23DA /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734620DDD1B2004C23DA /* RequestState.swift */; };
+		0937734920E0E3EF004C23DA /* IndicatorFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0937734820E0E3EF004C23DA /* IndicatorFooterView.swift */; };
 		09BCFAF720D21D790041A17A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFAF620D21D790041A17A /* AppDelegate.swift */; };
 		09BCFAFE20D21D790041A17A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BCFAFC20D21D790041A17A /* Main.storyboard */; };
 		09BCFB0020D21D790041A17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BCFAFF20D21D790041A17A /* Assets.xcassets */; };
@@ -24,13 +28,27 @@
 		09BCFB3A20D340530041A17A /* SimplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFB3920D340530041A17A /* SimplePresenter.swift */; };
 		09BCFB3C20D347530041A17A /* HttpbinIpEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFB3B20D347530041A17A /* HttpbinIpEntity.swift */; };
 		09BCFB3F20D34BB50041A17A /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFB3E20D34BB50041A17A /* AppError.swift */; };
-		09BCFB4220D471FE0041A17A /* Repository+Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFB4120D471FE0041A17A /* Repository+Requestable.swift */; };
+		09BCFB4220D471FE0041A17A /* Repository+Able.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFB4120D471FE0041A17A /* Repository+Able.swift */; };
 		09BCFB4420D47BB80041A17A /* SimpleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCFB4320D47BB80041A17A /* SimpleState.swift */; };
 		09BCFB4820D4B2670041A17A /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCFB4720D4B2670041A17A /* SVProgressHUD.framework */; };
 		09BCFB4A20D4B27B0041A17A /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCFB4920D4B27B0041A17A /* NotificationBanner.framework */; };
 		09BCFB5020D4BB010041A17A /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCFB4F20D4BB010041A17A /* MarqueeLabelSwift.framework */; };
 		09BCFB5120D4BB140041A17A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCFB4D20D4B8350041A17A /* SnapKit.framework */; };
 		09EFCCC520D4CB1A00E134B4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCC420D4CB1A00E134B4 /* APIManager.swift */; };
+		09EFCCCD20D8D09600E134B4 /* State+Has.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCCB20D8D09600E134B4 /* State+Has.swift */; };
+		09EFCCCE20D8D09600E134B4 /* ViewController+Able.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCCC20D8D09600E134B4 /* ViewController+Able.swift */; };
+		09EFCCD220D8D10E00E134B4 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCD120D8D10E00E134B4 /* AppBuilder.swift */; };
+		09EFCCD420D8D14900E134B4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCD320D8D14900E134B4 /* ListViewController.swift */; };
+		09EFCCD620D8D16200E134B4 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCD520D8D16200E134B4 /* ListRepository.swift */; };
+		09EFCCD820D8D18200E134B4 /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCD720D8D18200E134B4 /* ListState.swift */; };
+		09EFCCDA20D8D19500E134B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCD920D8D19500E134B4 /* ListPresenter.swift */; };
+		09EFCCDC20D8D1F000E134B4 /* QiitaItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCDB20D8D1F000E134B4 /* QiitaItemEntity.swift */; };
+		09EFCCDE20D8E92400E134B4 /* AlamofireSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCDD20D8E92400E134B4 /* AlamofireSamplesViewController.swift */; };
+		09EFCCE120DA21F900E134B4 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EFCCE020DA21F800E134B4 /* Kingfisher.framework */; };
+		09EFCCE320DB0ED800E134B4 /* QiitaItemElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCE220DB0ED800E134B4 /* QiitaItemElement.swift */; };
+		09EFCCE620DB3E3500E134B4 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCE420DB3E3500E134B4 /* ListViewCell.swift */; };
+		09EFCCE720DB3E3500E134B4 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09EFCCE520DB3E3500E134B4 /* ListViewCell.xib */; };
+		09EFCCEA20DBA1BF00E134B4 /* Bool+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCCE920DBA1BF00E134B4 /* Bool+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		0937734320DC5923004C23DA /* Element+Able.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Able.swift"; sourceTree = "<group>"; };
+		0937734620DDD1B2004C23DA /* RequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestState.swift; sourceTree = "<group>"; };
+		0937734820E0E3EF004C23DA /* IndicatorFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorFooterView.swift; sourceTree = "<group>"; };
 		09BCFAF320D21D790041A17A /* AlamofireExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BCFAF620D21D790041A17A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09BCFAFD20D21D790041A17A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,13 +96,27 @@
 		09BCFB3920D340530041A17A /* SimplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePresenter.swift; sourceTree = "<group>"; };
 		09BCFB3B20D347530041A17A /* HttpbinIpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpbinIpEntity.swift; sourceTree = "<group>"; };
 		09BCFB3E20D34BB50041A17A /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		09BCFB4120D471FE0041A17A /* Repository+Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Requestable.swift"; sourceTree = "<group>"; };
+		09BCFB4120D471FE0041A17A /* Repository+Able.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Able.swift"; sourceTree = "<group>"; };
 		09BCFB4320D47BB80041A17A /* SimpleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleState.swift; sourceTree = "<group>"; };
 		09BCFB4720D4B2670041A17A /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		09BCFB4920D4B27B0041A17A /* NotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationBanner.framework; path = Carthage/Build/iOS/NotificationBanner.framework; sourceTree = "<group>"; };
 		09BCFB4D20D4B8350041A17A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		09BCFB4F20D4BB010041A17A /* MarqueeLabelSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarqueeLabelSwift.framework; path = Carthage/Build/iOS/MarqueeLabelSwift.framework; sourceTree = "<group>"; };
 		09EFCCC420D4CB1A00E134B4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		09EFCCCB20D8D09600E134B4 /* State+Has.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "State+Has.swift"; sourceTree = "<group>"; };
+		09EFCCCC20D8D09600E134B4 /* ViewController+Able.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Able.swift"; sourceTree = "<group>"; };
+		09EFCCD120D8D10E00E134B4 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
+		09EFCCD320D8D14900E134B4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		09EFCCD520D8D16200E134B4 /* ListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepository.swift; sourceTree = "<group>"; };
+		09EFCCD720D8D18200E134B4 /* ListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
+		09EFCCD920D8D19500E134B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		09EFCCDB20D8D1F000E134B4 /* QiitaItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemEntity.swift; sourceTree = "<group>"; };
+		09EFCCDD20D8E92400E134B4 /* AlamofireSamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSamplesViewController.swift; sourceTree = "<group>"; };
+		09EFCCE020DA21F800E134B4 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		09EFCCE220DB0ED800E134B4 /* QiitaItemElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemElement.swift; sourceTree = "<group>"; };
+		09EFCCE420DB3E3500E134B4 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		09EFCCE520DB3E3500E134B4 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
+		09EFCCE920DBA1BF00E134B4 /* Bool+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0937734220DBA9C3004C23DA /* SwiftyBeaver.framework in Frameworks */,
+				09EFCCE120DA21F900E134B4 /* Kingfisher.framework in Frameworks */,
 				09BCFB5120D4BB140041A17A /* SnapKit.framework in Frameworks */,
 				09BCFB5020D4BB010041A17A /* MarqueeLabelSwift.framework in Frameworks */,
 				09BCFB4A20D4B27B0041A17A /* NotificationBanner.framework in Frameworks */,
@@ -118,6 +156,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0937734520DDD195004C23DA /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				0937734620DDD1B2004C23DA /* RequestState.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		09BCFAEA20D21D780041A17A = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +188,8 @@
 		09BCFAF520D21D790041A17A /* AlamofireExample */ = {
 			isa = PBXGroup;
 			children = (
+				0937734520DDD195004C23DA /* Global */,
+				09EFCCE820DBA19D00E134B4 /* Extension */,
 				09BCFB4020D471C60041A17A /* Protocol */,
 				09BCFB3D20D34B8F0041A17A /* Common */,
 				09EFCCCA20D772A200E134B4 /* Samples */,
@@ -175,6 +223,8 @@
 		09BCFB2620D223470041A17A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0937734120DBA9C3004C23DA /* SwiftyBeaver.framework */,
+				09EFCCE020DA21F800E134B4 /* Kingfisher.framework */,
 				09BCFB4F20D4BB010041A17A /* MarqueeLabelSwift.framework */,
 				09BCFB4D20D4B8350041A17A /* SnapKit.framework */,
 				09BCFB4920D4B27B0041A17A /* NotificationBanner.framework */,
@@ -206,6 +256,7 @@
 			children = (
 				09BCFB3E20D34BB50041A17A /* AppError.swift */,
 				09EFCCC420D4CB1A00E134B4 /* APIManager.swift */,
+				09EFCCD120D8D10E00E134B4 /* AppBuilder.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -213,7 +264,10 @@
 		09BCFB4020D471C60041A17A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				09BCFB4120D471FE0041A17A /* Repository+Requestable.swift */,
+				09BCFB4120D471FE0041A17A /* Repository+Able.swift */,
+				09EFCCCB20D8D09600E134B4 /* State+Has.swift */,
+				09EFCCCC20D8D09600E134B4 /* ViewController+Able.swift */,
+				0937734320DC5923004C23DA /* Element+Able.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -221,9 +275,35 @@
 		09EFCCCA20D772A200E134B4 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				09EFCCDD20D8E92400E134B4 /* AlamofireSamplesViewController.swift */,
+				09EFCCCF20D8D0C800E134B4 /* List */,
 				09BCFB3420D226560041A17A /* Simple */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		09EFCCCF20D8D0C800E134B4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				09EFCCD320D8D14900E134B4 /* ListViewController.swift */,
+				09EFCCD520D8D16200E134B4 /* ListRepository.swift */,
+				09EFCCD720D8D18200E134B4 /* ListState.swift */,
+				09EFCCD920D8D19500E134B4 /* ListPresenter.swift */,
+				09EFCCDB20D8D1F000E134B4 /* QiitaItemEntity.swift */,
+				09EFCCE220DB0ED800E134B4 /* QiitaItemElement.swift */,
+				09EFCCE420DB3E3500E134B4 /* ListViewCell.swift */,
+				09EFCCE520DB3E3500E134B4 /* ListViewCell.xib */,
+				0937734820E0E3EF004C23DA /* IndicatorFooterView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		09EFCCE820DBA19D00E134B4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				09EFCCE920DBA1BF00E134B4 /* Bool+Ex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09EFCCE720DB3E3500E134B4 /* ListViewCell.xib in Resources */,
 				09BCFB0320D21D790041A17A /* LaunchScreen.storyboard in Resources */,
 				09BCFB0020D21D790041A17A /* Assets.xcassets in Resources */,
 				09BCFAFE20D21D790041A17A /* Main.storyboard in Resources */,
@@ -373,6 +454,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/NotificationBanner.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MarqueeLabelSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 			);
 			outputPaths = (
 			);
@@ -388,13 +471,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				09BCFB3820D33F6C0041A17A /* SimpleRepository.swift in Sources */,
-				09BCFB4220D471FE0041A17A /* Repository+Requestable.swift in Sources */,
+				09BCFB4220D471FE0041A17A /* Repository+Able.swift in Sources */,
+				09EFCCDC20D8D1F000E134B4 /* QiitaItemEntity.swift in Sources */,
+				0937734720DDD1B2004C23DA /* RequestState.swift in Sources */,
+				09EFCCDA20D8D19500E134B4 /* ListPresenter.swift in Sources */,
+				09EFCCD820D8D18200E134B4 /* ListState.swift in Sources */,
+				09EFCCEA20DBA1BF00E134B4 /* Bool+Ex.swift in Sources */,
+				0937734420DC5923004C23DA /* Element+Able.swift in Sources */,
 				09BCFB3620D226880041A17A /* SimpleViewController.swift in Sources */,
+				09EFCCD220D8D10E00E134B4 /* AppBuilder.swift in Sources */,
 				09EFCCC520D4CB1A00E134B4 /* APIManager.swift in Sources */,
+				0937734920E0E3EF004C23DA /* IndicatorFooterView.swift in Sources */,
+				09EFCCD620D8D16200E134B4 /* ListRepository.swift in Sources */,
+				09EFCCCD20D8D09600E134B4 /* State+Has.swift in Sources */,
 				09BCFB3F20D34BB50041A17A /* AppError.swift in Sources */,
+				09EFCCCE20D8D09600E134B4 /* ViewController+Able.swift in Sources */,
+				09EFCCE620DB3E3500E134B4 /* ListViewCell.swift in Sources */,
 				09BCFB3A20D340530041A17A /* SimplePresenter.swift in Sources */,
 				09BCFB3C20D347530041A17A /* HttpbinIpEntity.swift in Sources */,
 				09BCFB4420D47BB80041A17A /* SimpleState.swift in Sources */,
+				09EFCCD420D8D14900E134B4 /* ListViewController.swift in Sources */,
+				09EFCCDE20D8E92400E134B4 /* AlamofireSamplesViewController.swift in Sources */,
+				09EFCCE320DB0ED800E134B4 /* QiitaItemElement.swift in Sources */,
 				09BCFAF720D21D790041A17A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +666,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AlamofireExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.ivalueworks.AlamofireExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,6 +686,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AlamofireExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.ivalueworks.AlamofireExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

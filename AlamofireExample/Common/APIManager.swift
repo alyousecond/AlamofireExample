@@ -13,6 +13,9 @@ class APIManager {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         configuration.timeoutIntervalForRequest = 5
+        configuration.urlCache = nil
+        configuration.httpShouldSetCookies = false
+        configuration.httpShouldUsePipelining = true
         return SessionManager(configuration: configuration)
     }()
 }
