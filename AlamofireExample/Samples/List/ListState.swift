@@ -9,7 +9,7 @@
 struct ListState: HasError, HasRequestState, HasPagingState {
     let maxPage = 3 // There is a limit on the API request, it is limited to 3 pages
     var page = 1
-    var perPage = 20
+    let perPage = 20
     var requestState  = RequestState(requestType: .request, isFetching: false) // HasRequestState
     var error = AppError.noError // HasError
     var elements: [QiitaItemElement] = []
